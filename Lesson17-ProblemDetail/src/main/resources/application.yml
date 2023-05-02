@@ -1,0 +1,22 @@
+# 指定初始Book數據(代替資料庫)
+product:
+  books:
+    - isbn: B001
+      name: java
+      author: lisa
+    - isbn: B002
+      name: tomcat
+      author: susan
+    - isbn: B003
+      name: jvm
+      author: zico
+
+server:
+  servlet:
+    context-path: /api
+
+# 開啟支持 RFC7807
+spring:
+  mvc:
+    problemdetails:
+      enabled: true

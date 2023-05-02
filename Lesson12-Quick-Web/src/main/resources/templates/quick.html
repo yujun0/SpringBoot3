@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>view</title>
+        <link rel="icon" th:href="@{/tiger.ico}" type="image/x-icon"/>
+<!--        <link rel="icon" href="../tiger.ico" type="image/x-icon"/>-->
+    </head>
+    <body>
+        <!-- 格式化，排列數據，view在browser顯示給用戶 -->
+        <h3>顯示response處理結果</h3>
+        <p th:text="${title}"></p>
+        <p th:text="${time}"></p>
+    </body>
+</html>

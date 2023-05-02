@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>if-for</title>
+    </head>
+    <body>
+      <h3>if-for</h3>
+      <div th:if="10 > 20">10 > 2</div>
+      <div th:if="${login}">用戶已經登錄</div>
+      <div th:if="${user.age > 18}">用戶成年了</div>
+
+      <hr/>
+      <h3>th:each循環</h3>
+      <table border="1">
+        <tr>
+          <td>id</td>
+          <td>name</td>
+          <td>age</td>
+        </tr>
+        <tr th:each="user:${users}">
+          <td th:text="${user.id}"></td>
+          <td th:text="${user.name}"></td>
+          <td th:text="${user.age}"></td>
+        </tr>
+      </table>
+    </body>
+</html>

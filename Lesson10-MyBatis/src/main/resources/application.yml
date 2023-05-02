@@ -1,0 +1,17 @@
+# 配置數據源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog
+    username: root
+    password: 1234
+
+# 配置mybatis
+mybatis:
+  configuration:
+    # 啟動駝峰命名、下划線命名
+#    map-underscore-to-camel-case: true
+    # 日誌
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 自定義mapper文件位置、mappers裡面以及任意子目錄的*.xml
+  mapper-locations: classpath:/mappers/**/*.xml

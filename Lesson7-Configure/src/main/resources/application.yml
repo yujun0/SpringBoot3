@@ -1,0 +1,53 @@
+# 編寫配置項 key: 值
+app:
+  name: Lesson07
+  owner: Lin
+  port: 8081
+  security:
+    username: root
+    password: 1234
+
+# 導入其他的配置，多個文件使用 「,」 作為分隔符
+spring:
+  config:
+    import: conf/db.yml, conf/redis.yml
+  # 激活某個配置文件
+  profiles:
+    active: dev
+
+
+myapp:
+  name: Lesson07
+  owner: Lin
+  port: 9001
+  security:
+    username: root
+    password: 1234
+
+# 第三方庫對象，沒有源代碼
+security:
+  username: 12345
+  password: 안녕하세요
+
+# 配置集合
+# 數組 和 List 一樣的，使用 「-」 一個成員
+names:
+  - Lisa
+  - Susan
+# List<MyServer> servers
+servers:
+  - title: tomcat服務器
+    ip: localhost.8081
+  - title: xxx服務器
+    ip: 202.12.11.2
+# Map<String, User> users
+users:
+  user1:
+    name: Mini
+    sex: 女
+    age: 26
+  user2:
+    name: Vito
+    sex: 男
+    age: 8
+

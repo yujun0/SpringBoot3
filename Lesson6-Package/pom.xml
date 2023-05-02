@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.0.5</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<!-- 項目座標 -->
+	<groupId>com.example</groupId>
+	<artifactId>Lesson6-Package</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Lesson6-Package</name>
+	<description>Lesson6-Package</description>
+	<!-- jdk版本	-->
+	<properties>
+		<java.version>20</java.version>
+	</properties>
+	<!-- 依賴列表 -->
+	<dependencies>
+		<!-- Spring Web 依賴，帶有 starter單詞叫做啟動器(啟動依賴)
+		 	 spring-boot-starter-xxx：是 Spring 官方推出的啟動器
+		 	 xxx-starter：非 spring 推出的，由其他組織提供的 -->
+
+		<!-- starter：啟動器，是一組依賴的描述 (說明那些maven gav以及其他需要的gav)
+		 	包含：
+		 		依賴和版本
+		 		傳遞依賴和版本
+		 		配置類，配置項
+		 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- 沒有version -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>myweb</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -1,0 +1,5 @@
+article:
+  # 最低閱讀數
+  low-read: 10
+  # 首頁顯示記錄的數量
+  top-read: 20

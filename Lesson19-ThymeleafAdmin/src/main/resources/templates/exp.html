@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>exp</title>
+    </head>
+    <body>
+      <h3>表達式</h3>
+      <div th:text="${name}"></div>
+      <div th:text="${address}"></div>
+
+      <h3>鏈接表達式</h3>A
+      <p><a th:href="@{https://www.google.com.tw/}">連接到google</a></p>
+      <p><a th:href="@{/link}">連接到link地址</a></p>
+      <p><a th:href="@{/link(id=111,name=lisa)}">連接表達式，傳遞參數(參數名=值，參數名=值...)</a></p>
+    </body>
+</html>

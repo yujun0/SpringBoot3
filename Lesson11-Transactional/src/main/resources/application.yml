@@ -1,0 +1,20 @@
+# 配置數據源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog
+    username: root
+    password: 1234
+    hikari:
+      auto-commit: true
+      maximum-pool-size: 10
+      connection-test-query: select 1
+
+# 配置mybatis
+mybatis:
+  configuration:
+    # 啟動駝峰命名、下划線命名
+    #    map-underscore-to-camel-case: true
+    # 日誌
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

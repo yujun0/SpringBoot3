@@ -1,0 +1,13 @@
+# 配置數據源
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog
+    username: root
+    password: 1234
+# 設置執行資料庫腳本 always：總是執行，never：不執行了
+  sql:
+    init:
+      mode: never
+
+

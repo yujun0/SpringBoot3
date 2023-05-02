@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>bind</title>
+    </head>
+    <body>
+        <h3>輸入異常</h3>
+        <table border="1px">
+            <thead>
+                <tr>字段</tr>
+                <tr>描述</tr>
+            </thead>
+            <tbody>
+                <tr th:each="err:${errors}">
+                    <td th:text="${err.field}"></td>
+                    <td th:text="${err.defaultMessage}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

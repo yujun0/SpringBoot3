@@ -1,0 +1,39 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: path_pattern_parser
+    servlet:
+      # 配置訪問中央調度器的路徑，默認 /
+      path: /course
+      # Servlet 的加載順序，越小創建時間越早，默認-1
+      load-on-startup: 0
+      # 時間格式，可以在接受請求參數使用
+#    format:
+#      date-time: yyyy-MM-dd HH:mm:ss
+server:
+  # 服務器端口號
+  port: 8001
+  servlet:
+    # 上下文訪問路徑
+    context-path: /api
+    encoding:
+      #request，response 字符編碼
+      charset: UTF-8
+      #強制 request，response 設置 charset 字符編碼
+      force: true
+  tomcat:
+    accesslog:
+      #啟用訪問日誌
+      enabled: true
+      #日誌路徑
+      directory: D:/exam
+      #日誌文件名前綴
+      prefix: mylog
+      #日誌文件日期時間
+      file-date-format: .yyyy-MM-dd
+      #日誌文件名稱後綴
+      suffix: .log
+    #服務器最大連接數
+    max-connections: 8000
+    #post 請求內容最大值，默認 2M
+    max-http-form-post-size: 2000000

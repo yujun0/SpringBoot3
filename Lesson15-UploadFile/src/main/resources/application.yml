@@ -1,0 +1,7 @@
+spring:
+    servlet:
+        multipart:
+#            max-file-size: 100KB
+#            max-request-size: 5MB
+            file-size-threshold: 0KB
+            location: D:/upload/
